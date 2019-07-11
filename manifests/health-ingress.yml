@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: health
+spec:
+  rules:
+  - host: health.chrisreed.xyz
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: health
+          servicePort: 80
